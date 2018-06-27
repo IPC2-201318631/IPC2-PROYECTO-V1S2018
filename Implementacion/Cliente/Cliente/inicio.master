@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="inicio.master.cs" Inherits="PubliMusic" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+ 	<script src="js/jquery.slides.min.js"></script>
+	<script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 940,
+          height: 350,
+        play: {
+          active: true,
+          auto: true,
+          interval: 4000,
+          swap: false,
+          pauseOnHover: false,
+          restartDelay: 2500
+        }
+
+      });
+    });
+  </script> 
+	<!--Titulo de nuestra Web-->
+	<title>Ninty Solutions</title>
+    
+</head>
+<body>
+
+
+    <form id="form1" runat="server">
+	<header>
+		<div id="subheader">
+			<div id="logotipo">
+				<p><a href="#">Ninty Solutions</a></p>
+			</div>
+				<!--Menu-->
+			<nav>
+				<ul>
+					<li><a href="index.aspx">Inicio</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+			</nav>
+			
+		</div>
+	</header>
+	<!--Contenedor principal-->
+	<section id="wrap">
+		<!--Main-->
+		<section id="main">
+			
+			<section id="slideshow">
+				    <div id="slides">
+					    <div><img src="imagenes/slideshets/slht1.jpg" alt="Imagen 1"></div>
+					    <div><img src="imagenes/slideshets/slht2.jpg" alt="Imagen 2"></div>
+                        <div><img src="imagenes/slideshets/slht3.jpg" alt="Imagen 3"></div>
+					</div>
+			</section>
+
+			
+                <asp:ContentPlaceHolder id="seccionBienvenidos" runat="server">
+       
+                    </asp:ContentPlaceHolder>
+				
+			
+
+			<section id="contenido">
+                    <asp:ContentPlaceHolder id="Contenido" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+			</section>
+
+			<!--Widget-->
+			<aside>
+				<section class="widget">
+					<asp:ContentPlaceHolder id="widget" runat="server">
+                        
+                    </asp:ContentPlaceHolder>
+				</section>
+
+				
+			</aside>
+
+		</section>
+
+		<!--Footer-->
+		<footer>
+
+			<section id="acerca-de">
+				<article>
+					<hgroup><h3>Acerca de ...</h3></hgroup>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</section>
+
+			<section class="redes-s">
+				<div class="email"><a class="red" href="#"></a></div>
+				<div class="twitter"><a class="red" href="#"></a></div>
+				<div class="youtube"><a class="red" href="#"></a></div>
+				<div class="facebook"><a class="red" href="#"></a></div>
+			</section>
+
+		</footer>
+
+		<!--Derechos de autor-->
+		<div class="copyright"><p>Copyright: Josué Girón - iiK' Soluciones ® - Tel. 4246-3482</p></div>
+    <div class="copyright"><p>Icons made by <a href="https://www.flaticon.es/autores/roundicons" title="Cancelar">Cancelar</a> from <a href="https://www.flaticon.es/"     title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p></div>
+
+
+	</section>
+    
+    </form>
+</body>
+</html>
